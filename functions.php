@@ -7,10 +7,26 @@
 	add_action('after_setup_theme' , 'younitedstyle_setup');
 
 
+	function younitedstyle_sidebars() {
+
+		//registrera sidebar i blogg
+		register_sidebar(array(
+			'name'				=>'Blog Sidebar',
+			'id'				=>'blog-sidebar',
+			'before_widget'		=>'<li class="widget">',
+			'after_widget'		=>'</li>',
+			'before_title'		=>'<h2>',
+			'after_title'		=>'</h2>',
+			));
+	}
+
+	add_action('widgets_init' , 'younitedstyle-sidebars');
+
+
 	function younitedstyle_scipts_and_styles(){
 
 		//ladda bootstrap4 styles
-		wp_enqueue_style( 'bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' . array() , '4.0.0-alpha.6' , 'all');
+		wp_enqueue_style( 'bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' , '4.0.0-alpha.6');
 
 		//ladda egen css
 		wp_enqueue_style( 'younitedstyle-site', get_template_directory_uri() . '/assets/css/site.css', array('bootsrap4') , '2017032701' , 'all');
