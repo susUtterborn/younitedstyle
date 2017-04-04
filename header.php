@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
@@ -11,12 +10,13 @@
 		<?php
 			wp_head();
 		?>
-
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		
 	</head>
-	<body>
 
+	<!-- lägger till klasser på body -->
+	<body <?php echo body_class(); ?> >
+
+	<!-- meny -->
 		<div class="navbar-wrapper">
 			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
