@@ -24,13 +24,24 @@
 				</button>
 				<div class=container>
 					<a class="navbar-brand" href="#">Younitedstyle</a>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-						</ul>
-					</div>
+
+					<?php
+
+					wp_nav_menu(array(
+						'theme_location'		=> 'header-menu',
+						'container'				=> 'div',
+						'container_class'		=> 'collapse navbar-colapse',
+						'container_id'			=> 'navbarNavDropdown',
+						'menu_class'			=> 'navbar-nav',
+						'fallback_cb'			=> '__return_false',
+						'items_wrap'			=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'depth'					=> 2,
+						'walker'				=> new bootstrap_4_walker_nav_menu(),
+
+						));
+
+					?>
+
 				</div><!--/container -->
 			</nav>
 		</div> <!--/navbar-wrapper -->
