@@ -3,6 +3,16 @@
 require_once('wp-bootstrap-navwalker.php');
 
 function younitedstyle_setup(){
+		//lägg till bildstl
+		add_image_size('page-featured-image' , 2580, 450, array('center' , 'center'));
+		add_image_size('post-featured-image' , 760, 9999, false);
+
+
+		//lägg till stöd för featured images / thumbnails
+		add_theme_support('post-thumbnails');
+		set_post_thumbnail_size(150, 150, false);
+
+
 		//registrera meny
 		register_nav_menu( 'header-menu' , __('Header menu' , 'younitedstyle') );
 
