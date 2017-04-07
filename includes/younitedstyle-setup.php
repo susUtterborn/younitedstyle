@@ -3,7 +3,8 @@
 require_once('wp-bootstrap-navwalker.php');
 
 function younitedstyle_setup(){
-		//lägg till bildstl
+
+		//lägg till bild stl
 		add_image_size('page-featured-image' , 2580, 450, array('center' , 'center'));
 		add_image_size('post-featured-image' , 760, 9999, false);
 
@@ -43,7 +44,7 @@ function younitedstyle_setup(){
 		wp_enqueue_style( 'bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' , '4.0.0-alpha.6');
 
 		//ladda egen css
-		wp_enqueue_style( 'younitedstyle-site', get_template_directory_uri() . '/assets/css/site.css', array('bootsrap4') , '2017032701' , 'all');
+		wp_enqueue_style( 'younitedstyle-site', get_template_directory_uri() . '/assets/css/site.css', array('bootsrap4') , '2017032702' , 'all');
 
 		//tar bort gamla versionen av jquery
 		wp_deregister_script('jquery');

@@ -7,3 +7,6 @@ img {
   background-size: cover;
   background-position: center center;
   min-height: 300px; }
+
+.site-footer {
+  background-color: gray; }
